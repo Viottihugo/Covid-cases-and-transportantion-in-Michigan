@@ -10,7 +10,7 @@ import pandas as pd
 #trips info taken from https://data.bts.gov/Research-and-Statistics/Trips-by-Distance/w96p-f2qv
 trips_df=pd.read_csv('data\Trips_by_Distance.csv')
 
-trips_MI=trips_df[trips_df['State Postal Code']=='MI'].iloc[:,:-10]
+trips_MI=trips_df[trips_df['State Postal Code']=='MI']#.iloc[:,:-10]
 
 trips_MI=trips_MI[pd.to_datetime(trips_MI['Date'])>= '2020-03-01']
 
